@@ -20,7 +20,7 @@ reaper.ClearConsole()
              record = reaper.GetMediaTrackInfo_Value(tr,'I_RECARM')
              --record = 1 if track is armed and record = 0 if not
              if record == 1 then
-                reaper.TrackFX_SetParam( tr,0,trackArmParamIndex , 1 )
+                reaper.TrackFX_SetParam( tr,0,trackArmParamIndex , 0.5 )
                 else
                 reaper.TrackFX_SetParam( tr,0,trackArmParamIndex , 0 )
              end
