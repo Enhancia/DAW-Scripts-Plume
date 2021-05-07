@@ -1,1 +1,1 @@
-dofile(reaper.GetResourcePath().."\\Scripts\\Neova\\Neova.lua")
+dofile(reaper.GetResourcePath().."/Scripts/Neova/Neova.lua")
