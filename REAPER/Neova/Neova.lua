@@ -7,7 +7,7 @@ function main()
     track_fxparam_count = reaper.TrackFX_GetNumParams(tr, 0) -- Get number of parameter in the tracks
       for k = 0, track_fxparam_count-1  do -- Loop over each parameter of this track
         buf = ""
-        --get parame name
+        --get param name
         retval, buf = reaper.TrackFX_GetParamName( tr, 0, k, buf )
         if buf == 'track_arm' then
           trackArmParamIndex = k
