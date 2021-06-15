@@ -3,7 +3,7 @@ function main()
     --get the i track
     tr = reaper.GetTrack(0,i)
     ok,name=reaper.TrackFX_GetFXName(tr,0,"") --0=first FX name
-    if name=='VSTi: Plume (Enhancia)' then
+    if name=='VSTi: Plume (Enhancia)' or name== "AUi: Plume (Enhancia)" then
     track_fxparam_count = reaper.TrackFX_GetNumParams(tr, 0) -- Get number of parameter in the tracks
       for k = 0, track_fxparam_count-1  do -- Loop over each parameter of this track
         buf = ""
@@ -22,7 +22,7 @@ function main()
       end -- ENDLOOP through FX parameters 
     end  
   end
-  reaper.defer(main)
+  --reaper.defer(main)
 end
 
 main()
